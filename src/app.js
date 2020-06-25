@@ -61,7 +61,7 @@ app.get('/weather', (req, res) =>{
             }
     
             // console.log(location)
-            console.log(forecastData)
+            // console.log(forecastData)
 
             res.send({
                 forecast: forecastData,
@@ -95,15 +95,11 @@ app.get('/products', (req,res)=>{
         })
     }
 
-
-
     console.log(req.query);
     res.send({
         products: []
     })
 })
-
-
 
 app.get('/help/*', (req, res) =>{
     res.render('404', {
@@ -113,7 +109,6 @@ app.get('/help/*', (req, res) =>{
     })
 })
 
-
 app.get('*', (req, res) =>{
     res.render('404', {
         helpText: 'Page not found',
@@ -121,7 +116,6 @@ app.get('*', (req, res) =>{
         name: 'Raymond Chu'
     })
 })
-
 
 app.listen(port, ()=>{
     console.log('Server is up on port 3000.' + port)

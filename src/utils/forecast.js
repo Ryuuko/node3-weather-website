@@ -32,11 +32,12 @@ const forecast = (latitude, longtitude, callback) => {
             callback('invalid coordinate. Try another search', undefined)
         }else{
 
-            // console.log(body);
+            console.log(body);
             callback(undefined, 
                 body.current.weather_descriptions[0] + '. ' +
                 'It is currently temperature is ' + body.current.temperature  + '. ' +
-                'It feels like ' + body.current.feelslike
+                'It feels like ' + body.current.feelslike + '. ' +
+                'Humidity is ' + body.current.humidity + '. '
             )
         }
     })
